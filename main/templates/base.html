@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Title -->
+    <title>{{ title }} - Comma Studios</title>
+
+    {% load static %}
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+	<!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8">
+
+</head>
+
+<!-- Comma Studios -->
+
+<body>
+	<!-- Header -->
+	<header>
+		<!-- Navbar -->
+	    <nav id="navbar">
+	        <div class="nav-wrapper grey darken-3"> <!-- Colour of Navbar defined in class. Base colour: grey, Darkened: 3 -->
+	    	<!-- Waiting for nacholan wth HTML -->
+	        </div>
+	    </nav>
+	</header>
+
+	<!-- Main -->
+	<main class="teal accent-4">
+		<!-- The Visable HTML -->
+		<div class="container" id="content">
+		{% block content %}
+		{% endblock %}
+		</div>
+
+	</main>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<!-- If we need scripts, put it in here -->
+	<script>
+		// All JS Inits in here
+    	$(document).ready(function(){
+    		// Init Sidenav
+    		$('.button-collapse').sideNav();
+    	});
+
+	</script>
+
+</body>
+</html>
